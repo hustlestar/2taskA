@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.menu.com"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="menu" type="menu:menuType" xmlns:menu="http://www.menu.com"/>
+    <xs:complexType name="menuType">
+        <xs:sequence>
+            <xs:element type="menu:submenuType" name="submenu" maxOccurs="unbounded" minOccurs="0"
+                        xmlns:menu="http://www.menu.com"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="submenuType">
+        <xs:sequence>
+            <xs:element type="menu:dishType" name="dish" maxOccurs="unbounded" minOccurs="0"
+                        xmlns:menu="http://www.menu.com"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="name" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="dishType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="photo"/>
+            <xs:element type="xs:string" name="title"/>
+            <xs:element name="description" maxOccurs="4" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" default="0" name="id" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element type="xs:string" name="weight"/>
+            <xs:element name="price" maxOccurs="3" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:short">
+                            <xs:attribute type="xs:byte" default="1" name="id" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

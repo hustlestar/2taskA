@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu xmlns="http://www.menu.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.menu.com menu2.xsd">
+    <submenu name="Холодные закуски">
+        <dish>
+            <photo>fishassorti0.jpg</photo>
+            <title>Ассорти рыбное</title>
+            <description>Слабосоленая форель, семга</description>
+            <weight>100/20/15</weight>
+        </dish>
+        <dish>
+            <photo>tartaleki1.jpg</photo>
+            <title>Тарталетки с красной икрой</title>
+            <description>Тарталетки с красной икрой</description>
+            <weight>60/50</weight>
+        </dish>
+        <dish>
+            <photo>zakus2.jpg</photo>
+            <title>Закуска по-русски</title>
+            <description>Кусочки атлантической сельди с отварным картофелем, луком, лимоном и зеленью</description>
+            <weight>70/50/2/10</weight>
+        </dish>
+        <dish>
+            <photo>kurkur3.jpg</photo>
+            <title>Куриный рулет</title>
+            <description>Куриный рулет собственного производства</description>
+            <weight>100/5</weight>
+        </dish>
+        <dish>
+            <photo>basturma4.jpg</photo>
+            <title>Бастурма</title>
+            <description>Вяленая вырезка из говяжьего мяса</description>
+            <weight>50/5</weight>
+        </dish>
+        <dish>
+            <photo>assmeat5.jpg</photo>
+            <title>Ассорти мясное</title>
+            <description>Нарезка из буженины, бастурмы, куриного рулета собственного произодства и колбасы</description>
+            <weight>100/30</weight>
+        </dish>
+        <dish>
+            <photo>assback6.jpg</photo>
+            <title>Ассорти баклажаны</title>
+            <description id="0">Жареные баклажаны</description>
+            <description id="1">с помидорами</description>
+            <description id="2">с чесноком</description>
+            <description id="3">с орехами</description>
+            <weight>100/5</weight>
+            </dish>
+        <dish>
+            <photo>solen7.jpg</photo>
+            <title>Соленья по-домашнему</title>
+            <description>Маринованные овощи</description>
+            <weight>150/10</weight>
+        </dish>
+        <dish>
+            <photo>grandma8.jpg</photo>
+            <title>Бабушкины угощения</title>
+            <description>Ассорти из маринованных грибов</description>
+            <weight>150/20/10</weight>
+        </dish>
+        <dish>
+            <photo>cheeseplate9.jpg</photo>
+            <title>Сырная тарелка</title>
+            <description>Сыры Чечел, дор блю, российский, мраморный</description>
+            <weight>100/5</weight>
+        </dish>
+        <dish>
+            <photo>brynza10.jpg</photo>
+            <title>Брынза</title>
+            <description>Рассольный сыр, изготовляемый из овечьего молока</description>
+            <weight>75/5</weight>
+        </dish>
+        <dish>
+            <photo>zelen11.jpg</photo>
+            <title>Зелень</title>
+            <description>Кинза, лук, петрушка, укроп, базилик</description>
+            <weight>30</weight>
+        </dish>
+        <dish>
+            <photo>assveg12.jpg</photo>
+            <title>Ассорти овощное</title>
+            <description>Свежие помидоры, болгарский перец, огурцы, редис и зелень</description>
+            <weight>150/10</weight>
+        </dish>
+        <dish>
+            <photo>vegfl13.jpg</photo>
+            <title>Овощной букет</title>
+            <description>Корейская морковь, капуста, фунчоза</description>
+            <weight>150/10</weight>
+        </dish>
+        <dish>
+            <photo>vegarm14.jpg</photo>
+            <title>Овощи по-армянски</title>
+            <description>Мелко нарезанные свежие помидоры, огурцы, болгарский перец, укроп, базилик, кинза, лист салата,
+                зелень
+            </description>
+            <weight>150/40</weight>
+        </dish>
+        <dish>
+            <photo>seniortom15.jpg</photo>
+            <title>Сеньор помидор</title>
+            <description>Помидор, фаршированный сырным муссом</description>
+            <weight>150/1</weight>
+        </dish>
+        <dish>
+            <photo>saladsfest16.jpg</photo>
+            <title>Фестиваль салатов</title>
+            <weight>400/10</weight>
+        </dish>
+        <dish>
+            <photo>olives17.jpg</photo>
+            <title>Оливки, маслины</title>
+            <weight>50</weight>
+        </dish>
+        <dish>
+            <photo>lemon18.jpg</photo>
+            <title>Лимон</title>
+            <weight>60</weight>
+        </dish>
+        <dish>
+            <photo>maconi19.jpg</photo>
+            <title>Мацони</title>
+            <weight>300</weight>
+        </dish>
+    </submenu>
+    <submenu name="Горячие закуски">
+        <dish>
+            <photo>lobio.jpg</photo>
+            <title>Лобио с шампиньонами</title>
+            <description>Фасоль с шампиньонами и грецким орехом</description>
+            <weight>150/5</weight>
+            <price>105</price>
+        </dish>
+        <dish>
+            <photo>julien.jpg</photo>
+            <title>Жульен</title>
+            <description id="1">с курицей</description>
+            <description id="2">с грибами</description>
+            <weight>120/1</weight>
+            <price id="1">145</price>
+            <price id="2">155</price>
+        </dish>
+        <dish>
+            <photo>ahtamarmeat.jpg</photo>
+            <title>Ахтамар мясной</title>
+            <description>Колбаса, ветчина, буженина, сыр, запеченые на магале в лаваше</description>
+            <weight>1 шт.</weight>
+            <price>165</price>
+        </dish>
+        <dish>
+            <photo>fhtamarveg.jpg</photo>
+            <title>Ахтамар с овощами</title>
+            <description>Сыр, помидоры, зелень, запеченые на мангале в лаваше</description>
+            <weight>1 шт.</weight>
+            <price>150</price>
+        </dish>
+        <dish>
+            <photo>surprise.jpg</photo>
+            <title>Сюрприз</title>
+            <weight>1 шт.</weight>
+            <price>260</price>
+        </dish>
+        <dish>
+            <photo>krevetki.jpg</photo>
+            <title>Креветки</title>
+            <description id="1">отварные</description>
+            <description id="2">жареные</description>
+            <weight>120/30</weight>
+            <price id="1">135</price>
+            <price id="2">155</price>
+        </dish>
+        <dish>
+            <photo>midii.jpg</photo>
+            <title>Мидии по-турецки</title>
+            <description>Мидии, фаршированные сыром и грецким орехом</description>
+            <weight>150/30</weight>
+            <price>190</price>
+        </dish>
+        <dish>
+            <photo>escargo.jpg</photo>
+            <title>Эскарго</title>
+            <description>Виноградные улитки, фаршированные по-бургундски</description>
+            <weight>12 шт.</weight>
+            <price>230</price>
+        </dish>
+    </submenu>
+    <submenu name="Завтраки">
+        <dish>
+            <photo>glaz.jpg</photo>
+            <title>Глазунья</title>
+            <description>2 яйца (на выбор: ветчина, сыр, помидоры)</description>
+            <weight>150</weight>
+        </dish>
+        <dish>
+            <photo>omlet.jpg</photo>
+            <title>Омлет</title>
+            <weight>100</weight>
+        </dish>
+        <dish>
+            <photo>blinchiki.jpg</photo>
+            <title>Блинчики с мясом</title>
+            <description>Жареные блинчики с мясом</description>
+            <weight>150</weight>
+        </dish>
+    </submenu>
+</menu>
