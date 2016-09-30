@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="xercesImpl" level="project" />
+    <orderEntry type="library" name="MEVDOMparser" level="project" />
   </component>
 </module>
