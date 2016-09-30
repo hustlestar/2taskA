@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class SaxEx {
 	public static void main(String[] args) throws SAXException, IOException{
-	    XMLReader reader = XMLReaderFactory.createXMLReader();//SAX parser
+	    XMLReader reader = XMLReaderFactory.createXMLReader();
 	    MenuSaxHandler handler = new MenuSaxHandler();
 	    reader.setContentHandler(handler);
 	    reader.parse(new InputSource("src\\res\\menu.xml"));

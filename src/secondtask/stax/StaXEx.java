@@ -23,7 +23,7 @@ public class StaXEx {
             for (Submenu submenu : menu) {
                 System.out.println(submenu.getName());
                 for (Dish dish : submenu.getList()) {
-                    System.out.println(dish.getTitle()+" - "+dish.getDescription());
+                    System.out.println(dish.getTitle() + " - " + dish.getDescription());
                 }
             }
         } catch (XMLStreamException e) {
@@ -51,21 +51,23 @@ public class StaXEx {
                         case DISH:
                             dish = new Dish();
                             break;
+                        case DESCRIPTION:
+                            String id = reader.getAttributeValue(null, "ID");
+                            if (id == null || id.equals("0")) {
+                                description = new ArrayList<>();
+                            }
+                            break;
+                        case PRICE:
+                            id = reader.getAttributeValue(null, "ID");
+                            if (id == null || id.equals("1")) {
+                                price = new ArrayList<>();
+                            }
+                            break;
                         case SUBMENU:
                             submenu = new Submenu();
                             dishList = new ArrayList<>();
+                            submenu.setName(reader.getAttributeValue(null, "name"));
                             break;
-                    }
-                    break;
-                case XMLStreamConstants.ATTRIBUTE:
-
-                    switch (elementName) {
-                        case SUBMENU:
-                            String text = reader.getAttributeValue(1);
-                            submenu.setName(text);
-                            break;
-                        case DESCRIPTION:
-
                     }
                     break;
                 case XMLStreamConstants.CHARACTERS:

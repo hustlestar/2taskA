@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.menu.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="price">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:short">
+          <xs:attribute type="xs:byte" name="id" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dish">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="menu:photo" xmlns:menu="http://www.menu.com"/>
+        <xs:element ref="menu:title" xmlns:menu="http://www.menu.com"/>
+        <xs:element ref="menu:description" maxOccurs="unbounded" minOccurs="0" xmlns:menu="http://www.menu.com"/>
+        <xs:element ref="menu:weight" xmlns:menu="http://www.menu.com"/>
+        <xs:element ref="menu:price" maxOccurs="unbounded" minOccurs="0" xmlns:menu="http://www.menu.com"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="submenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="menu:dish" maxOccurs="unbounded" minOccurs="0" xmlns:menu="http://www.menu.com"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="menu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="menu:submenu" maxOccurs="unbounded" minOccurs="0" xmlns:menu="http://www.menu.com"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="photo" type="xs:string"/>
+  <xs:element name="description">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="ID" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="weight" type="xs:string"/>
+</xs:schema>

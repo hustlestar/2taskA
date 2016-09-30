@@ -25,29 +25,33 @@ public class MenuSaxHandler extends DefaultHandler {
         return submenuList;
     }
 
+    @Override
     public void startDocument() throws SAXException {
         System.out.println("Parsing started.");
     }
 
+    @Override
     public void endDocument() throws SAXException {
         System.out.println("Parsing ended.");
     }
 
+    @Override
     public void characters(char[] buffer, int start, int length) {
         text.append(buffer, start, length);
     }
 
+    @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         text = new StringBuilder();
         if (qName.equals("dish")) {
             dish = new Dish();
-            System.out.print("dishcr" + count++);
+            // System.out.print("dishcr" + count++);
         } else if (qName.equals("description")) {
-            if (attributes.getValue("id") == null || attributes.getValue("id").equals("0")) {
+            if (attributes.getValue("ID") == null || attributes.getValue("ID").equals("0")) {
                 description = new ArrayList<>();
             }
         } else if (qName.equals("price")) {
-            if (attributes.getValue("id") == null || attributes.getValue("id").equals("1")) {
+            if (attributes.getValue("ID") == null || attributes.getValue("ID").equals("1")) {
                 price = new ArrayList<>();
             }
         } else if (qName.equals("submenu")) {
@@ -58,7 +62,7 @@ public class MenuSaxHandler extends DefaultHandler {
     }
 
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        MenuTagName tagName = MenuTagName.valueOf(qName.toUpperCase().replace("-", "_"));
+        MenuTagName tagName = MenuTagName.valueOf(qName.toUpperCase());
 
         switch (tagName) {
             case PHOTO:
@@ -80,11 +84,11 @@ public class MenuSaxHandler extends DefaultHandler {
                 break;
             case DISH:
                 dishList.add(dish);
-                System.out.println("dish");
+                //System.out.println("dish");
                 dish = null;
                 break;
             case SUBMENU:
-                System.out.println("xxx");
+                //System.out.println("xxx");
                 submenu.setList(dishList);
                 submenuList.add(submenu);
                 dishList = null;
